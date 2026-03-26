@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A modern maternity hospital website focused on compassionate care, safe delivery, and supportive services." />
+    <title>Sandhya Ram Hospital</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap (layout + components) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- AOS (scroll animations) -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Swiper (testimonials slider) -->
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="assets/style.css" />
+  </head>
+  <body>
+    <!-- Top Navigation -->
+    <header class="hb-header" id="site-header">
+      <nav class="navbar navbar-expand-lg hb-navbar">
+        <div class="container">
+          <a class="navbar-brand d-flex align-items-center gap-2" href="#home" aria-label="Sandhya Ram Hospital Home">
+            <span class="hb-logo" aria-hidden="true">
+              <span class="hb-logo-heart"></span>
+            </span>
+            <span class="hb-brand-text">
+              <span class="hb-brand-name">Sandhya Ram</span>
+              <span class="hb-brand-tag">Maternity Hospital</span>
+            </span>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#hbNav"
+            aria-controls="hbNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse justify-content-end" id="hbNav">
+            <ul class="navbar-nav hb-nav ms-lg-auto">
+              <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#doctors">Doctors</a></li>
+              <li class="nav-item"><a class="nav-link" href="#stories">Stories</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+
+            <div class="hb-actions d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+              <button class="btn hb-btn-soft" id="hbThemeBtn" type="button" aria-label="Toggle theme">
+                <span class="hb-theme-icon" aria-hidden="true"></span>
+                <span class="hb-theme-label">Care Mode</span>
+              </button>
+              <a class="btn hb-btn-primary" href="#contact">Book a Visit</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <main>
+      <section class="hb-hero" id="home">
+        <div class="hb-hero-bg" aria-hidden="true">
+          <div class="hb-blob hb-blob-a"></div>
+          <div class="hb-blob hb-blob-b"></div>
+          <div class="hb-dots"></div>
+        </div>
+
+        <div class="container hb-hero-inner">
+          <div class="row align-items-center g-5">
+            <div class="col-lg-7" data-aos="fade-up">
+              <div class="hb-pill">
+                <span class="hb-pill-dot" aria-hidden="true"></span>
+                Gentle, safe, and supportive maternity care
+              </div>
+
+              <h1 class="hb-hero-title">
+                A calmer way to welcome your new beginning.
+              </h1>
+              <p class="hb-hero-subtitle">
+                From prenatal guidance to delivery and postnatal support, we create a compassionate environment for families - every step, with care you can feel.
+              </p>
+
+              <div class="hb-hero-cta d-flex flex-wrap gap-3 mt-3">
+                <a class="btn hb-btn-primary btn-lg" href="#services">Explore Services</a>
+                <a class="btn hb-btn-soft btn-lg" href="#doctors">Meet Our Doctors</a>
+              </div>
+
+              <div class="hb-hero-badges mt-4">
+                <div class="hb-badge" data-aos="zoom-in" data-aos-delay="50">
+                  <div class="hb-badge-icon" aria-hidden="true">+</div>
+                  <div>
+                    <div class="hb-badge-title">24/7 Support</div>
+                    <div class="hb-badge-sub">Friendly guidance anytime</div>
+                  </div>
+                </div>
+                <div class="hb-badge" data-aos="zoom-in" data-aos-delay="120">
+                  <div class="hb-badge-icon" aria-hidden="true">&#10003;</div>
+                  <div>
+                    <div class="hb-badge-title">Safety First</div>
+                    <div class="hb-badge-sub">Evidence-based maternity care</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-5" data-aos="fade-left">
+              <div class="hb-hero-card" role="img" aria-label="Hospital care interior illustration placeholder">
+                <!-- Replace this area with real images later -->
+                <div class="hb-hero-image" aria-hidden="true">
+                  <div class="hb-hero-image-inner">
+                    <div class="hb-hero-image-icon" aria-hidden="true"></div>
+                    <div class="hb-hero-image-text">
+                      Picture placeholder
+                      <span class="hb-hero-image-note">Swap with your hospital photo</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="hb-hero-card-footer">
+                  <div class="hb-mini-stat">
+                    <div class="hb-mini-stat-value" data-hb-counter="0" data-hb-target="98">98</div>
+                    <div class="hb-mini-stat-label">Patient satisfaction</div>
+                  </div>
+                  <div class="hb-mini-stat">
+                    <div class="hb-mini-stat-value" data-hb-counter="0" data-hb-target="1500">1500</div>
+                    <div class="hb-mini-stat-label">Safe deliveries supported</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="hb-section" id="about">
+        <div class="container">
+          <div class="hb-section-head" data-aos="fade-up">
+            <p class="hb-kicker">About Our Hospital</p>
+            <h2 class="hb-section-title">Compassionate care, designed around you</h2>
+            <p class="hb-section-sub">
+              We believe maternity care should feel reassuring. Our team blends medical excellence with calm communication, respectful support, and a warm home-like environment.
+            </p>
+          </div>
+
+          <div class="row g-4 hb-about-grid">
+            <div class="col-md-6" data-aos="fade-up">
+              <div class="hb-feature">
+                  <div class="hb-feature-icon" aria-hidden="true">Care</div>
+                <div>
+                  <h3 class="hb-feature-title">Gentle guidance</h3>
+                  <p class="hb-feature-desc">Clear explanations, thoughtful follow-ups, and care plans that evolve with you.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="80">
+              <div class="hb-feature">
+                  <div class="hb-feature-icon" aria-hidden="true">Safety</div>
+                <div>
+                  <h3 class="hb-feature-title">Safe and modern</h3>
+                  <p class="hb-feature-desc">Experienced clinicians and evidence-based protocols for confident, safe delivery.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="160">
+              <div class="hb-feature">
+                  <div class="hb-feature-icon" aria-hidden="true">Warmth</div>
+                <div>
+                  <h3 class="hb-feature-title">Comfort-first environment</h3>
+                  <p class="hb-feature-desc">Private spaces, supportive staff, and a calm approach from check-in to recovery.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" data-aos="fade-up" data-aos-delay="240">
+              <div class="hb-feature">
+                  <div class="hb-feature-icon" aria-hidden="true">Family</div>
+                <div>
+                  <h3 class="hb-feature-title">Whole-family support</h3>
+                  <p class="hb-feature-desc">Education, lactation support, and guidance for partners and caregivers.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section class="hb-section hb-section-alt" id="services">
+        <div class="container">
+          <div class="hb-section-head" data-aos="fade-up">
+            <p class="hb-kicker">Services</p>
+            <h2 class="hb-section-title">Everything you need, from pregnancy to postnatal</h2>
+            <p class="hb-section-sub">A welcoming pathway with medical support you can trust.</p>
+          </div>
+
+          <div class="row g-4 hb-cards">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+              <div class="hb-card">
+                <div class="hb-card-top">
+                  <span class="hb-card-icon" aria-hidden="true">PC</span>
+                  <h3 class="hb-card-title">Prenatal Care</h3>
+                </div>
+                <p class="hb-card-desc">Routine checkups, wellness planning, screenings, and compassionate counseling.</p>
+                <div class="hb-card-tags">
+                  <span class="hb-tag">Ultrasound</span>
+                  <span class="hb-tag">Nutrition</span>
+                  <span class="hb-tag">Monitoring</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+              <div class="hb-card">
+                <div class="hb-card-top">
+                  <span class="hb-card-icon" aria-hidden="true">DL</span>
+                  <h3 class="hb-card-title">Delivery & Labor Support</h3>
+                </div>
+                <p class="hb-card-desc">Skilled teams and supportive guidance throughout labor, with comfort options.</p>
+                <div class="hb-card-tags">
+                  <span class="hb-tag">Safe delivery</span>
+                  <span class="hb-tag">Team-based care</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+              <div class="hb-card">
+                <div class="hb-card-top">
+                  <span class="hb-card-icon" aria-hidden="true">PR</span>
+                  <h3 class="hb-card-title">Postnatal Recovery</h3>
+                </div>
+                <p class="hb-card-desc">Follow-ups, recovery plans, and supportive coaching for the days after birth.</p>
+                <div class="hb-card-tags">
+                  <span class="hb-tag">Follow-ups</span>
+                  <span class="hb-tag">Recovery plans</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="240">
+              <div class="hb-card">
+                <div class="hb-card-top">
+                  <span class="hb-card-icon" aria-hidden="true">LS</span>
+                  <h3 class="hb-card-title">Lactation Support</h3>
+                </div>
+                <p class="hb-card-desc">Education and hands-on help to build confidence with feeding and bonding.</p>
+                <div class="hb-card-tags">
+                  <span class="hb-tag">Feeding coaching</span>
+                  <span class="hb-tag">Resources</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="320">
+              <div class="hb-card">
+                <div class="hb-card-top">
+                  <span class="hb-card-icon" aria-hidden="true">MW</span>
+                  <h3 class="hb-card-title">Maternal Wellness</h3>
+                </div>
+                <p class="hb-card-desc">Mental wellbeing, stress support, and tailored guidance during transitions.</p>
+                <div class="hb-card-tags">
+                  <span class="hb-tag">Wellbeing</span>
+                  <span class="hb-tag">Counseling</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="hb-card">
+                <div class="hb-card-top">
+                  <span class="hb-card-icon" aria-hidden="true">CL</span>
+                  <h3 class="hb-card-title">Prenatal Classes</h3>
+                </div>
+                <p class="hb-card-desc">Practical sessions to help you feel prepared - physically and emotionally.</p>
+                <div class="hb-card-tags">
+                  <span class="hb-tag">Partner sessions</span>
+                  <span class="hb-tag">Education</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="hb-cta-row mt-5" data-aos="fade-up">
+            <div class="hb-cta-box">
+              <div>
+                <h3 class="hb-cta-title">Need help deciding?</h3>
+                <p class="hb-cta-sub">Share your timeline and we'll recommend the right services to start.</p>
+              </div>
+              <a class="btn hb-btn-primary" href="#contact">Talk to Us</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Doctors -->
+      <section class="hb-section" id="doctors">
+        <div class="container">
+          <div class="hb-section-head" data-aos="fade-up">
+            <p class="hb-kicker">Doctors</p>
+            <h2 class="hb-section-title">Meet the team behind your comfort</h2>
+            <p class="hb-section-sub">Specialists committed to safe outcomes and kind communication.</p>
+          </div>
+
+          <div class="row g-4 hb-doctors">
+            <div class="col-md-6 col-lg-4" data-aos="fade-up">
+              <article class="hb-doctor">
+                <div class="hb-doctor-media">
+                  <div class="hb-avatar" aria-hidden="true">
+                    <span class="hb-avatar-initials">DR</span>
+                  </div>
+                  <!-- Replace with a real doctor photo later -->
+                  <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                </div>
+                <div class="hb-doctor-body">
+                  <h3 class="hb-doctor-name">Dr. Aisha Rahman</h3>
+                  <p class="hb-doctor-role">Consultant Obstetrician</p>
+                  <p class="hb-doctor-focus">Prenatal care, high-risk support, and compassionate planning.</p>
+                  <div class="hb-doctor-actions">
+                    <button class="btn hb-btn-soft hb-btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#hbDoctorModal" data-doctor='{"name":"Dr. Aisha Rahman","role":"Consultant Obstetrician","focus":"Prenatal care, high-risk support, and compassionate planning.","highlights":["Prenatal monitoring","Evidence-based counseling","Comfort-first communication"]}'>
+                      View Profile
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+              <article class="hb-doctor">
+                <div class="hb-doctor-media">
+                  <div class="hb-avatar" aria-hidden="true">
+                    <span class="hb-avatar-initials">DR</span>
+                  </div>
+                  <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                </div>
+                <div class="hb-doctor-body">
+                  <h3 class="hb-doctor-name">Dr. Priya Menon</h3>
+                  <p class="hb-doctor-role">Senior Gynecologist</p>
+                  <p class="hb-doctor-focus">Delivery support and postnatal recovery guidance.</p>
+                  <div class="hb-doctor-actions">
+                    <button class="btn hb-btn-soft hb-btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#hbDoctorModal" data-doctor='{"name":"Dr. Priya Menon","role":"Senior Gynecologist","focus":"Delivery support and postnatal recovery guidance.","highlights":["Labor support","Postnatal checkups","Patient-centered recovery plans"]}'>
+                      View Profile
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+              <article class="hb-doctor">
+                <div class="hb-doctor-media">
+                  <div class="hb-avatar" aria-hidden="true">
+                    <span class="hb-avatar-initials">DR</span>
+                  </div>
+                  <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                </div>
+                <div class="hb-doctor-body">
+                  <h3 class="hb-doctor-name">Dr. Sruthi AV</h3>
+                  <p class="hb-doctor-role">Gynecologist</p>
+                  <p class="hb-doctor-focus">Gentle gynecologic support with compassionate, patient-centered counseling.</p>
+                  <div class="hb-doctor-actions">
+                    <button class="btn hb-btn-soft hb-btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#hbDoctorModal" data-doctor='{"name":"Dr. Sruthi AV","role":"Gynecologist","focus":"Gentle gynecologic support with compassionate, patient-centered counseling.","highlights":["Women's health consultations","Care plans tailored to you","Education and reassurance at every visit"]}'>
+                      View Profile
+                    </button>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stories -->
+      <section class="hb-section hb-section-alt" id="stories">
+        <div class="container">
+          <div class="hb-section-head" data-aos="fade-up">
+            <p class="hb-kicker">Patient Stories</p>
+            <h2 class="hb-section-title">Comfort that lasts beyond delivery</h2>
+            <p class="hb-section-sub">A few words from families we've supported.</p>
+          </div>
+
+          <div class="hb-slider" data-aos="fade-up">
+            <div class="swiper hb-swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide hb-slide">
+                  <div class="hb-quote">
+                    "They explained everything slowly, and I felt safe the whole time."
+                  </div>
+                  <div class="hb-quote-meta">Aarav & Rhea</div>
+                </div>
+                <div class="swiper-slide hb-slide">
+                  <div class="hb-quote">
+                    "The team was kind, respectful, and truly supportive during recovery."
+                  </div>
+                  <div class="hb-quote-meta">Zoya & Meera</div>
+                </div>
+                <div class="swiper-slide hb-slide">
+                  <div class="hb-quote">
+                    "The prenatal classes helped us feel prepared emotionally and practically."
+                  </div>
+                  <div class="hb-quote-meta">Kabir & Sana</div>
+                </div>
+              </div>
+
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            </div>
+          </div>
+
+          <div class="hb-stats-row mt-5" data-aos="fade-up">
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="hb-stat">
+                  <div class="hb-stat-value" data-hb-counter="0" data-hb-target="12">12</div>
+                  <div class="hb-stat-label">Year of compassionate service</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="hb-stat">
+                  <div class="hb-stat-value" data-hb-counter="0" data-hb-target="24">24</div>
+                  <div class="hb-stat-label">Dedicated care hours available</div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="hb-stat">
+                  <div class="hb-stat-value" data-hb-counter="0" data-hb-target="3">3</div>
+                  <div class="hb-stat-label">Care teams working together</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="hb-section" id="contact">
+        <div class="container">
+          <div class="hb-section-head" data-aos="fade-up">
+            <p class="hb-kicker">Contact</p>
+            <h2 class="hb-section-title">Book a visit or ask a question</h2>
+            <p class="hb-section-sub">Send a message and we'll get back to you soon.</p>
+          </div>
+
+          <div class="row g-4 hb-contact">
+            <div class="col-lg-5" data-aos="fade-up">
+              <div class="hb-contact-card">
+                <h3 class="hb-contact-title">Sandhya Ram Front Desk</h3>
+                <p class="hb-contact-text">
+                  We're here to help with appointments, questions, and service guidance.
+                </p>
+                <div class="hb-contact-list">
+                  <div class="hb-contact-item">
+                    <span class="hb-contact-icon" aria-hidden="true">Phone</span>
+                    <span>+1 (555) 012-3456</span>
+                  </div>
+                  <div class="hb-contact-item">
+                    <span class="hb-contact-icon" aria-hidden="true">Email</span>
+                    <span>appointments@carebloom.example</span>
+                  </div>
+                  <div class="hb-contact-item">
+                    <span class="hb-contact-icon" aria-hidden="true">Address</span>
+                    <span>123 Blossom Avenue, Your City</span>
+                  </div>
+                </div>
+                <div class="hb-contact-note">
+                  Replace this placeholder address/phone later with your real details.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left">
+              <form class="hb-form" id="hbContactForm" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label class="form-label" for="hbName">Full Name</label>
+                    <input class="form-control" id="hbName" name="name" placeholder="Your name" required />
+                    <div class="invalid-feedback">Please enter your name.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="hbPhone">Phone</label>
+                    <input class="form-control" id="hbPhone" name="phone" placeholder="e.g., +1 555 123 4567" required />
+                    <div class="invalid-feedback">Please enter a valid phone number.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="hbService">Interested Service</label>
+                    <select class="form-select" id="hbService" name="service" required>
+                      <option value="" selected disabled>Choose one</option>
+                      <option>Prenatal Care</option>
+                      <option>Delivery & Labor Support</option>
+                      <option>Postnatal Recovery</option>
+                      <option>Lactation Support</option>
+                      <option>Maternal Wellness</option>
+                      <option>Prenatal Classes</option>
+                    </select>
+                    <div class="invalid-feedback">Please choose a service.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label" for="hbDate">Preferred Date</label>
+                    <input class="form-control" id="hbDate" name="date" type="date" required />
+                    <div class="invalid-feedback">Please choose a date.</div>
+                  </div>
+                  <div class="col-12">
+                    <label class="form-label" for="hbMessage">Message</label>
+                    <textarea class="form-control" id="hbMessage" name="message" rows="4" placeholder="Tell us how we can help (optional)"></textarea>
+                  </div>
+                </div>
+
+                <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mt-4">
+                  <button class="btn hb-btn-primary" type="submit">Request Appointment</button>
+                  <div class="hb-form-hint">
+                    By submitting, you agree to be contacted about your request.
+                  </div>
+                </div>
+
+                <div class="hb-form-success mt-3" id="hbFormSuccess" role="status" aria-live="polite" hidden>
+                  <div class="hb-success-title">Request received</div>
+                  <div class="hb-success-text">Thank you. Our team will reach out shortly.</div>
+                </div>
+                <div class="hb-form-error mt-3" id="hbFormError" role="alert" aria-live="assertive" hidden>
+                  Please check the form fields and try again.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="hb-footer">
+        <div class="container py-4">
+          <div class="hb-footer-inner">
+            <div class="hb-footer-left">
+              <div class="hb-footer-brand">Sandhya Ram Hospital</div>
+              <div class="hb-footer-copy">Compassionate care, safe outcomes, and calm support.</div>
+            </div>
+            <div class="hb-footer-right">
+              <a href="#about" class="hb-footer-link">About</a>
+              <a href="#services" class="hb-footer-link">Services</a>
+              <a href="#doctors" class="hb-footer-link">Doctors</a>
+              <a href="#contact" class="hb-footer-link">Contact</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Doctor Modal -->
+    <div class="modal fade" id="hbDoctorModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content hb-modal">
+          <div class="modal-header border-0">
+            <div>
+              <div class="hb-modal-title" id="hbDoctorModalTitle">Doctor Profile</div>
+              <div class="hb-modal-subtitle" id="hbDoctorModalRole"></div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p class="hb-modal-focus" id="hbDoctorModalFocus"></p>
+            <div class="hb-modal-highlights">
+              <div class="hb-modal-highlights-title">Highlights</div>
+              <ul class="hb-modal-list" id="hbDoctorModalList"></ul>
+            </div>
+          </div>
+          <div class="modal-footer border-0">
+            <a class="btn hb-btn-primary" href="#contact" data-bs-dismiss="modal">Book with This Doctor</a>
+            <button class="btn hb-btn-soft" type="button" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS: jQuery + Bootstrap + UX libs -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
+
