@@ -601,6 +601,63 @@ html[data-theme="dark"] .hb-doctor-overlay {
   display: flex;
 }
 
+/* Doctors */
+.hb-dept-block {
+  margin-top: 34px;
+}
+
+.hb-dept-title {
+  font-weight: 1000;
+  letter-spacing: -0.02em;
+  font-size: 22px;
+  margin: 0 0 14px;
+}
+
+.hb-doctor-tags {
+  margin-top: 4px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.hb-doctor--small {
+  border-radius: 22px;
+}
+
+.hb-doctor--small .hb-doctor-media {
+  height: 150px;
+}
+
+.hb-doctor--small .hb-avatar {
+  top: 18px;
+  left: 14px;
+  width: 66px;
+  height: 66px;
+  border-radius: 26px;
+}
+
+.hb-doctor--small .hb-doctor-overlay {
+  right: 10px;
+  bottom: 10px;
+  width: 130px;
+  height: 46px;
+  border-radius: 18px;
+}
+
+.hb-doctor--small .hb-doctor-body {
+  padding: 14px;
+  gap: 8px;
+}
+
+.hb-doctor--small .hb-doctor-name {
+  font-size: 16px;
+}
+
+.hb-doctor--small .hb-doctor-role,
+.hb-doctor--small .hb-doctor-focus {
+  font-size: 13.5px;
+}
+
 /* Stories / Swiper */
 .hb-quote {
   padding: 28px 22px;
@@ -825,6 +882,121 @@ html[data-theme="dark"] .hb-form .form-select {
   color: var(--hb-muted);
   font-weight: 800;
   margin-bottom: 6px;
+}
+
+/* More details popup (blur backdrop + 80% panel) */
+.hb-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 4vh 4vw;
+  background: rgba(7, 10, 18, 0.45);
+  backdrop-filter: blur(12px);
+}
+
+.hb-popup-panel {
+  width: 80vw;
+  height: 80vh;
+  max-width: 980px;
+  max-height: 900px;
+  overflow: auto;
+  border-radius: 28px;
+  border: 1px solid var(--hb-border);
+  background: var(--hb-surface-2);
+  box-shadow: var(--hb-shadow);
+  padding: 18px 18px 22px;
+}
+
+html[data-theme="dark"] .hb-popup-panel {
+  background: rgba(16, 22, 38, 0.88);
+}
+
+body.hb-popup-open {
+  overflow: hidden;
+}
+
+.hb-popup-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.hb-popup-lang {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hb-lang-btn {
+  border-radius: 999px;
+  border: 1px solid rgba(124, 58, 237, 0.18);
+  background: rgba(124, 58, 237, 0.10);
+  color: var(--hb-text);
+  font-weight: 950;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.hb-lang-btn[aria-pressed="true"] {
+  background: linear-gradient(135deg, var(--hb-primary) 0%, var(--hb-primary-2) 100%);
+  border-color: rgba(124, 58, 237, 0.35);
+  color: white;
+}
+
+.hb-popup-contentwrap {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.hb-popup-title {
+  font-weight: 1000;
+  letter-spacing: -0.03em;
+  margin: 6px 0 14px;
+  font-size: 22px;
+}
+
+.hb-popup-q {
+  font-weight: 1000;
+  letter-spacing: -0.02em;
+  font-size: 16.5px;
+  margin: 16px 0 8px;
+}
+
+.hb-popup-contentwrap p {
+  margin: 0 0 10px;
+  line-height: 1.75;
+  color: var(--hb-muted);
+  font-weight: 850;
+}
+
+.hb-popup-note {
+  margin-top: 18px !important;
+  font-weight: 950 !important;
+  color: var(--hb-text) !important;
+}
+
+.hb-popup-contentwrap .hb-popup-langcontent[hidden] {
+  display: none;
+}
+
+.hb-tag--clickable {
+  cursor: pointer;
+  border-color: rgba(124, 58, 237, 0.35);
+}
+.hb-tag--clickable:hover {
+  background: rgba(124, 58, 237, 0.16);
+}
+
+@media (max-width: 576px) {
+  .hb-popup-panel {
+    width: 92vw;
+    height: 85vh;
+    padding: 14px 14px 18px;
+  }
 }
 
 /* Focus */

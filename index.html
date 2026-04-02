@@ -283,11 +283,18 @@
               <div class="hb-card">
                 <div class="hb-card-top">
                   <span class="hb-card-icon" aria-hidden="true">CL</span>
-                  <h3 class="hb-card-title">Prenatal Classes</h3>
+                  <h3 class="hb-card-title">Laparoscopic sterilization</h3>
                 </div>
-                <p class="hb-card-desc">Practical sessions to help you feel prepared - physically and emotionally.</p>
+                <p class="hb-card-desc">Learn about laparoscopic permanent contraception in a calm, clear way.</p>
                 <div class="hb-card-tags">
-                  <span class="hb-tag">Partner sessions</span>
+                  <button
+                    type="button"
+                    class="hb-tag hb-tag--clickable"
+                    id="hbMoreDetailsTrigger"
+                    aria-controls="hbLaparoscopicInfoPopup"
+                  >
+                    More details
+                  </button>
                   <span class="hb-tag">Education</span>
                 </div>
               </div>
@@ -315,22 +322,31 @@
             <p class="hb-section-sub">Specialists committed to safe outcomes and kind communication.</p>
           </div>
 
+          <!-- Main doctors (normal size cards) -->
           <div class="row g-4 hb-doctors">
             <div class="col-md-6 col-lg-4" data-aos="fade-up">
               <article class="hb-doctor">
                 <div class="hb-doctor-media">
                   <div class="hb-avatar" aria-hidden="true">
-                    <span class="hb-avatar-initials">DR</span>
+                    <span class="hb-avatar-initials">HS</span>
                   </div>
-                  <!-- Replace with a real doctor photo later -->
                   <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
                 </div>
                 <div class="hb-doctor-body">
-                  <h3 class="hb-doctor-name">Dr. Aisha Rahman</h3>
-                  <p class="hb-doctor-role">Consultant Obstetrician</p>
-                  <p class="hb-doctor-focus">Prenatal care, high-risk support, and compassionate planning.</p>
+                  <h3 class="hb-doctor-name">Dr. H Samartharam</h3>
+                  <p class="hb-doctor-role">Director</p>
+                  <p class="hb-doctor-focus">Consultant Obstetrician &amp; Gynaecologist</p>
+                  <div class="hb-doctor-tags">
+                    <span class="hb-tag">Available 24 Hrs</span>
+                  </div>
                   <div class="hb-doctor-actions">
-                    <button class="btn hb-btn-soft hb-btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#hbDoctorModal" data-doctor='{"name":"Dr. Aisha Rahman","role":"Consultant Obstetrician","focus":"Prenatal care, high-risk support, and compassionate planning.","highlights":["Prenatal monitoring","Evidence-based counseling","Comfort-first communication"]}'>
+                    <button
+                      class="btn hb-btn-soft hb-btn-sm"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#hbDoctorModal"
+                      data-doctor='{"name":"Dr. H Samartharam","role":"Director","focus":"Available 24 Hrs","highlights":["Consultant Obstetrician &amp; Gynaecologist"]}'
+                    >
                       View Profile
                     </button>
                   </div>
@@ -342,16 +358,25 @@
               <article class="hb-doctor">
                 <div class="hb-doctor-media">
                   <div class="hb-avatar" aria-hidden="true">
-                    <span class="hb-avatar-initials">DR</span>
+                    <span class="hb-avatar-initials">SAV</span>
                   </div>
                   <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
                 </div>
                 <div class="hb-doctor-body">
-                  <h3 class="hb-doctor-name">Dr. Priya Menon</h3>
-                  <p class="hb-doctor-role">Senior Gynecologist</p>
-                  <p class="hb-doctor-focus">Delivery support and postnatal recovery guidance.</p>
+                  <h3 class="hb-doctor-name">Dr Sruthi A.V</h3>
+                  <p class="hb-doctor-role">Consultant Obstetrics &amp; Gynaecology</p>
+                  <p class="hb-doctor-focus">MBBS, DNB, FMAS, DMAS</p>
+                  <div class="hb-doctor-tags">
+                    <span class="hb-tag">Everyday 9.00AM to 3.30PM (Sunday holiday)</span>
+                  </div>
                   <div class="hb-doctor-actions">
-                    <button class="btn hb-btn-soft hb-btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#hbDoctorModal" data-doctor='{"name":"Dr. Priya Menon","role":"Senior Gynecologist","focus":"Delivery support and postnatal recovery guidance.","highlights":["Labor support","Postnatal checkups","Patient-centered recovery plans"]}'>
+                    <button
+                      class="btn hb-btn-soft hb-btn-sm"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#hbDoctorModal"
+                      data-doctor='{"name":"Dr Sruthi A.V","role":"Consultant Obstetrics &amp; Gynaecology","focus":"Everyday 9.00AM to 3.30PM (Sunday holiday)","highlights":["MBBS, DNB, FMAS, DMAS"]}'
+                    >
                       View Profile
                     </button>
                   </div>
@@ -363,21 +388,284 @@
               <article class="hb-doctor">
                 <div class="hb-doctor-media">
                   <div class="hb-avatar" aria-hidden="true">
-                    <span class="hb-avatar-initials">DR</span>
+                    <span class="hb-avatar-initials">SR</span>
                   </div>
                   <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
                 </div>
                 <div class="hb-doctor-body">
-                  <h3 class="hb-doctor-name">Dr. Sruthi AV</h3>
-                  <p class="hb-doctor-role">Gynecologist</p>
-                  <p class="hb-doctor-focus">Gentle gynecologic support with compassionate, patient-centered counseling.</p>
+                  <h3 class="hb-doctor-name">Dr Shankar ram HS</h3>
+                  <p class="hb-doctor-role">Consultant Urologist</p>
+                  <p class="hb-doctor-focus">MS (Surgery), MCh (Urology), FMAS DMAS FAGE</p>
                   <div class="hb-doctor-actions">
-                    <button class="btn hb-btn-soft hb-btn-sm" type="button" data-bs-toggle="modal" data-bs-target="#hbDoctorModal" data-doctor='{"name":"Dr. Sruthi AV","role":"Gynecologist","focus":"Gentle gynecologic support with compassionate, patient-centered counseling.","highlights":["Women's health consultations","Care plans tailored to you","Education and reassurance at every visit"]}'>
+                    <button
+                      class="btn hb-btn-soft hb-btn-sm"
+                      type="button"
+                      data-bs-toggle="modal"
+                      data-bs-target="#hbDoctorModal"
+                      data-doctor='{"name":"Dr Shankar ram HS","role":"Consultant Urologist","focus":"Consultation by appointment","highlights":["MS (Surgery), MCh (Urology), FMAS DMAS FAGE"]}'
+                    >
                       View Profile
                     </button>
                   </div>
                 </div>
               </article>
+            </div>
+          </div>
+
+          <!-- Department doctors (small size cards) -->
+          <div class="hb-dept-block" data-aos="fade-up">
+            <h3 class="hb-dept-title">Surgery Department</h3>
+            <div class="row g-4 hb-doctors hb-doctors-small">
+              <div class="col-md-6 col-lg-4">
+                <article class="hb-doctor hb-doctor--small">
+                  <div class="hb-doctor-media">
+                    <div class="hb-avatar" aria-hidden="true">
+                      <span class="hb-avatar-initials">JV</span>
+                    </div>
+                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                  </div>
+                  <div class="hb-doctor-body">
+                    <h3 class="hb-doctor-name">Dr. Jayaprasad .V</h3>
+                    <p class="hb-doctor-role">General and Laparoscopic Surgeon</p>
+                    <p class="hb-doctor-focus">MBBS, MS (General Surgery)</p>
+                    <div class="hb-doctor-tags">
+                      <span class="hb-tag">Every Thursday</span>
+                    </div>
+                    <div class="hb-doctor-actions">
+                      <button
+                        class="btn hb-btn-soft hb-btn-sm"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#hbDoctorModal"
+                        data-doctor='{"name":"Dr. Jayaprasad .V","role":"General and Laparoscopic Surgeon","focus":"Every Thursday","highlights":["MBBS, MS (General Surgery)"]}'
+                      >
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="hb-dept-block" data-aos="fade-up" data-aos-delay="80">
+            <h3 class="hb-dept-title">Radiology Department</h3>
+            <div class="row g-4 hb-doctors hb-doctors-small">
+              <div class="col-md-6 col-lg-4">
+                <article class="hb-doctor hb-doctor--small">
+                  <div class="hb-doctor-media">
+                    <div class="hb-avatar" aria-hidden="true">
+                      <span class="hb-avatar-initials">AA</span>
+                    </div>
+                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                  </div>
+                  <div class="hb-doctor-body">
+                    <h3 class="hb-doctor-name">Dr. Arun Anand NP</h3>
+                    <p class="hb-doctor-role">Radiology Specialist</p>
+                    <p class="hb-doctor-focus">Available: Every Tuesday Evening 4.00PM to 5.00PM</p>
+                    <div class="hb-doctor-actions">
+                      <button
+                        class="btn hb-btn-soft hb-btn-sm"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#hbDoctorModal"
+                        data-doctor='{"name":"Dr. Arun Anand NP","role":"Radiology Specialist","focus":"Every Tuesday Evening 4.00PM to 5.00PM","highlights":[]}'
+                      >
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="hb-dept-block" data-aos="fade-up" data-aos-delay="160">
+            <h3 class="hb-dept-title">Orthopaedics Department</h3>
+            <div class="row g-4 hb-doctors hb-doctors-small">
+              <div class="col-md-6 col-lg-4">
+                <article class="hb-doctor hb-doctor--small">
+                  <div class="hb-doctor-media">
+                    <div class="hb-avatar" aria-hidden="true">
+                      <span class="hb-avatar-initials">AK</span>
+                    </div>
+                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                  </div>
+                  <div class="hb-doctor-body">
+                    <h3 class="hb-doctor-name">Dr Adithya Krishnachandran</h3>
+                    <p class="hb-doctor-role">Consultant Orthopaedic Surgeon</p>
+                    <p class="hb-doctor-focus">MS Orthopaedic</p>
+                    <div class="hb-doctor-tags">
+                      <span class="hb-tag">Tuesday, Thursday and Saturday - 3.00PM to 5.00PM</span>
+                    </div>
+                    <div class="hb-doctor-actions">
+                      <button
+                        class="btn hb-btn-soft hb-btn-sm"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#hbDoctorModal"
+                        data-doctor='{"name":"Dr Adithya Krishnachandran","role":"Consultant Orthopaedic Surgeon","focus":"Tuesday, Thursday and Saturday - 3.00PM to 5.00PM","highlights":["MS Orthopaedic"]}'
+                      >
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="hb-dept-block" data-aos="fade-up" data-aos-delay="240">
+            <h3 class="hb-dept-title">EMERGENCY DEPARTMENT - Available 24 Hr.</h3>
+            <div class="row g-4 hb-doctors hb-doctors-small">
+              <div class="col-md-4 col-lg-4">
+                <article class="hb-doctor hb-doctor--small">
+                  <div class="hb-doctor-media">
+                    <div class="hb-avatar" aria-hidden="true">
+                      <span class="hb-avatar-initials">PR</span>
+                    </div>
+                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                  </div>
+                  <div class="hb-doctor-body">
+                    <h3 class="hb-doctor-name">Dr. Pradibha</h3>
+                    <p class="hb-doctor-role">Resident RMO</p>
+                    <p class="hb-doctor-focus">MBBS</p>
+                    <div class="hb-doctor-tags">
+                      <span class="hb-tag">Available 24 Hrs</span>
+                    </div>
+                    <div class="hb-doctor-actions">
+                      <button
+                        class="btn hb-btn-soft hb-btn-sm"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#hbDoctorModal"
+                        data-doctor='{"name":"Dr. Pradibha","role":"Resident RMO","focus":"Available 24 Hrs","highlights":["MBBS"]}'
+                      >
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-4 col-lg-4">
+                <article class="hb-doctor hb-doctor--small">
+                  <div class="hb-doctor-media">
+                    <div class="hb-avatar" aria-hidden="true">
+                      <span class="hb-avatar-initials">JR</span>
+                    </div>
+                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                  </div>
+                  <div class="hb-doctor-body">
+                    <h3 class="hb-doctor-name">Dr. Jamsheela</h3>
+                    <p class="hb-doctor-role">Resident RMO</p>
+                    <p class="hb-doctor-focus">MBBS</p>
+                    <div class="hb-doctor-tags">
+                      <span class="hb-tag">Available 24 Hrs</span>
+                    </div>
+                    <div class="hb-doctor-actions">
+                      <button
+                        class="btn hb-btn-soft hb-btn-sm"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#hbDoctorModal"
+                        data-doctor='{"name":"Dr. Jamsheela","role":"Resident RMO","focus":"Available 24 Hrs","highlights":["MBBS"]}'
+                      >
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-4 col-lg-4">
+                <article class="hb-doctor hb-doctor--small">
+                  <div class="hb-doctor-media">
+                    <div class="hb-avatar" aria-hidden="true">
+                      <span class="hb-avatar-initials">SR</span>
+                    </div>
+                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                  </div>
+                  <div class="hb-doctor-body">
+                    <h3 class="hb-doctor-name">Dr. Subash S</h3>
+                    <p class="hb-doctor-role">Resident RMO</p>
+                    <p class="hb-doctor-focus">MBBS</p>
+                    <div class="hb-doctor-tags">
+                      <span class="hb-tag">Available 24 Hrs</span>
+                    </div>
+                    <div class="hb-doctor-actions">
+                      <button
+                        class="btn hb-btn-soft hb-btn-sm"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#hbDoctorModal"
+                        data-doctor='{"name":"Dr. Subash S","role":"Resident RMO","focus":"Available 24 Hrs","highlights":["MBBS"]}'
+                      >
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+
+          <div class="hb-dept-block" data-aos="fade-up" data-aos-delay="320">
+            <h3 class="hb-dept-title">ANESTHESIA DEPARTMENT</h3>
+            <div class="row g-4 hb-doctors hb-doctors-small">
+              <div class="col-md-6 col-lg-6">
+                <article class="hb-doctor hb-doctor--small">
+                  <div class="hb-doctor-media">
+                    <div class="hb-avatar" aria-hidden="true">
+                      <span class="hb-avatar-initials">N</span>
+                    </div>
+                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                  </div>
+                  <div class="hb-doctor-body">
+                    <h3 class="hb-doctor-name">Dr. Neethu</h3>
+                    <p class="hb-doctor-role">Anesthesia Department</p>
+                    <p class="hb-doctor-focus">MBBS, MD, DNB Anesthesia</p>
+                    <div class="hb-doctor-actions">
+                      <button
+                        class="btn hb-btn-soft hb-btn-sm"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#hbDoctorModal"
+                        data-doctor='{"name":"Dr. Neethu","role":"Anesthesia Department","focus":"Anesthesia services","highlights":["MBBS, MD, DNB Anesthesia"]}'
+                      >
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
+
+              <div class="col-md-6 col-lg-6">
+                <article class="hb-doctor hb-doctor--small">
+                  <div class="hb-doctor-media">
+                    <div class="hb-avatar" aria-hidden="true">
+                      <span class="hb-avatar-initials">SH</span>
+                    </div>
+                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                  </div>
+                  <div class="hb-doctor-body">
+                    <h3 class="hb-doctor-name">Dr. Shaheer Hamza</h3>
+                    <p class="hb-doctor-role">Anesthesia Department</p>
+                    <p class="hb-doctor-focus">MBBS, MD(Anaesth), FIPM</p>
+                    <div class="hb-doctor-actions">
+                      <button
+                        class="btn hb-btn-soft hb-btn-sm"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-target="#hbDoctorModal"
+                        data-doctor='{"name":"Dr. Shaheer Hamza","role":"Anesthesia Department","focus":"Anesthesia services","highlights":["MBBS, MD(Anaesth), FIPM"]}'
+                      >
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </article>
+              </div>
             </div>
           </div>
         </div>
@@ -504,7 +792,7 @@
                       <option>Postnatal Recovery</option>
                       <option>Lactation Support</option>
                       <option>Maternal Wellness</option>
-                      <option>Prenatal Classes</option>
+                      <option>Laparoscopic sterilization</option>
                     </select>
                     <div class="invalid-feedback">Please choose a service.</div>
                   </div>
@@ -579,6 +867,104 @@
           <div class="modal-footer border-0">
             <a class="btn hb-btn-primary" href="#contact" data-bs-dismiss="modal">Book with This Doctor</a>
             <button class="btn hb-btn-soft" type="button" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Laparoscopic sterilisation info popup -->
+    <div class="hb-popup-backdrop" id="hbLaparoscopicInfoPopup" hidden>
+      <div class="hb-popup-panel" role="dialog" aria-modal="true" aria-labelledby="hbLaparoscopicPopupTitle">
+        <div class="hb-popup-topbar">
+          <div class="hb-popup-lang">
+            <button type="button" class="hb-lang-btn" id="hbLangEn" aria-pressed="true" data-lang="en">
+              English
+            </button>
+            <button type="button" class="hb-lang-btn" id="hbLangMl" aria-pressed="false" data-lang="ml">
+              Malayalam
+            </button>
+          </div>
+          <button type="button" class="btn-close" id="hbLaparoscopicPopupClose" aria-label="Close"></button>
+        </div>
+
+        <div class="hb-popup-contentwrap">
+          <h3 class="hb-popup-title" id="hbLaparoscopicPopupTitle">
+            <span id="hbLaparoscopicPopupTitleEn">Laparoscopic sterilisation</span>
+            <span id="hbLaparoscopicPopupTitleMl" hidden>ലാപറോസ്കോപിക് സ്ഥിര ഗർഭനിരോധനം</span>
+          </h3>
+
+          <div class="hb-popup-langcontent" data-lang="ml">
+            <h4 class="hb-popup-q">ലാപറോസ്കോപിക് സ്ഥിര ഗർഭനിരോധനം എന്താണ്?</h4>
+            <p>
+              ലാപറോസ്കോപിക് (  കീ ഹോൾ) പ്രസവം നിർത്തൽ സ്ഥിരമായ ഗർഭനിരോധന മാർഗമാണ്. ഫലോപ്യൻ ട്യൂബുകൾ റിംഗ് ഉപയോഗിച്ച് ബ്ലോക്ക് ചെയ്യുന്നതിലൂടെ അണ്ഡവും ബീജവും സംയോജിക്കുന്നത് തടയുകയും ഗർഭധാരണം ഒഴിവാക്കുകയും ചെയ്യുന്നു.
+            </p>
+
+            <h4 class="hb-popup-q">ആർക്കെല്ലാം ഈ ശസ്ത്രക്രിയ ചെയ്യാം?</h4>
+            <p>കുടുംബം പൂർത്തിയാക്കിയ സ്ത്രീകൾ</p>
+            <p>സ്ഥിരമായ ഗർഭനിരോധന മാർഗം ആഗ്രഹിക്കുന്നവർ</p>
+            <p>സാധാരണ പ്രസവമോ സങ്കീർണമില്ലാത്ത സീസേറിയൻ ശസ്ത്രക്രിയയോ ഉണ്ടായവർ</p>
+            <p>ചെറിയ ശസ്ത്രക്രിയയ്ക്ക് മെഡിക്കൽ ആയി യോഗ്യരായവർ.</p>
+
+            <h4 class="hb-popup-q">എപ്പോഴാണ് ഇത് ചെയ്യുന്നത്?</h4>
+            <p>സാധാരണയായി ആർത്തവം കഴിഞ്ഞ ഉടൻ (ആർത്തവം തുടങ്ങി 10 ദിവസത്തിനുള്ളിൽ)</p>
+            <p>പ്രസവത്തിന് ശേഷം (6 ആഴ്ച കഴിഞ്ഞ് - interval sterilisation)</p>
+            <p>നിലവിൽ ഗർഭം ഇല്ലെന്ന് ഉറപ്പാക്കണം</p>
+
+            <h4 class="hb-popup-q">ശസ്ത്രക്രിയ എങ്ങനെ നടത്തുന്നു?</h4>
+            <p>അനസ്‌തീഷ്യയിൽ (ജനറൽ) നടത്തുന്നു</p>
+            <p>നാഭിക്കു സമീപം ചെറിയ 2 തുളകൾ ഉണ്ടാക്കുന്നു</p>
+            <p>ചെറിയ ക്യാമറ (ലാപറോസ്കോപ്പ്) ഉൾപ്പെടുത്തുന്നു</p>
+            <p>ഫലോപ്യൻ ട്യൂബുകൾ റിംഗുകൾ ഉപയോഗിച്ച് അടയ്ക്കുന്നു</p>
+            <p>ശസ്ത്രക്രിയയ്ക്ക് ഏകദേശം 15-30 മിനിറ്റ് സമയം.</p>
+
+            <h4 class="hb-popup-q">ആശുപത്രി താമസം:</h4>
+            <p>ഇത് ഒരു ഡേ-കെയർ പ്രോസീജർ ആണ് (സാധാരണയായി രാത്രി താമസം വേണ്ടതില്ല)</p>
+            <p>സാധാരണയായി 6-12 മണിക്കൂറിനുള്ളിൽ ഡിസ്ചാർജ് ലഭിക്കും</p>
+
+            <h4 class="hb-popup-q">പ്രയോജനങ്ങൾ:</h4>
+            <p>സ്ഥിരവും വളരെ ഫലപ്രദവുമായ ഗർഭനിരോധനം</p>
+            <p>ഹോർമോണുകളിലും ആർത്തവ പ്രക്രിയിലും മാറ്റമില്ല.</p>
+            <p>ദീർഘകാല മരുന്നുകൾ ആവശ്യമില്ല.</p>
+            <p>വേഗത്തിൽ സുഖം പ്രാപിക്കൽ.</p>
+
+            <p class="hb-popup-note">(ശാരീരിക യോഗ്യത ഉറപ്പാക്കുന്നതിനായി മുൻകൂർ പരിശോധന ആവശ്യമാണ് )</p>
+          </div>
+
+          <div class="hb-popup-langcontent" data-lang="en" hidden>
+            <h4 class="hb-popup-q">What is laparoscopic sterilisation?</h4>
+            <p>
+              Laparoscopic sterilisation is a permanent method of contraception. It involves blocking or sealing the fallopian tubes so that the egg and sperm cannot meet, preventing pregnancy.
+            </p>
+
+            <h4 class="hb-popup-q">Who can undergo this procedure?</h4>
+            <p>Women who have completed their family</p>
+            <p>Prefer a permanent birth control method</p>
+            <p>Have had normal deliveries or uncomplicated previous Caesarean section</p>
+            <p>Are medically fit for a short surgical procedure</p>
+
+            <h4 class="hb-popup-q">When is it done?</h4>
+            <p>Usually done immediately after menstruation (within 10 days)</p>
+            <p>Can be done post-delivery (interval sterilisation after 6 weeks)</p>
+            <p>Ensure no current pregnancy</p>
+
+            <h4 class="hb-popup-q">How is the procedure done?</h4>
+            <p>Done under anaesthesia (general)</p>
+            <p>Two small holes made near the umbilicus (navel)</p>
+            <p>A thin camera (laparoscope) is inserted</p>
+            <p>Fallopian tubes are blocked using rings</p>
+            <p>Procedure takes about 15-30 minutes</p>
+
+            <h4 class="hb-popup-q">Hospital stay</h4>
+            <p>Day-care procedure (no overnight stay in most cases)</p>
+            <p>Discharge usually within 6-12 hours</p>
+
+            <h4 class="hb-popup-q">Benefits:</h4>
+            <p>Permanent and highly effective contraception</p>
+            <p>No effect on hormones or menstrual cycle</p>
+            <p>No need for long-term medications</p>
+            <p>Quick recovery.</p>
+
+            <p class="hb-popup-note">(A PRIOR CONSULTATION IS REQUIRED TO ASSESS FITNESS)</p>
           </div>
         </div>
       </div>

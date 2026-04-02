@@ -209,6 +209,86 @@
     }
   }
 
+  function initLaparoscopicInfoPopup() {
+    const backdrop = document.getElementById("hbLaparoscopicInfoPopup");
+    const trigger = document.getElementById("hbMoreDetailsTrigger");
+    const closeBtn = document.getElementById("hbLaparoscopicPopupClose");
+    const btnEn = document.getElementById("hbLangEn");
+    const btnMl = document.getElementById("hbLangMl");
+
+    if (!backdrop || !trigger || !closeBtn || !btnEn || !btnMl) return;
+
+    const contentEn = backdrop.querySelector('.hb-popup-langcontent[data-lang="en"]');
+    const contentMl = backdrop.querySelector('.hb-popup-langcontent[data-lang="ml"]');
+    if (!contentEn || !contentMl) return;
+
+    const titleEn = document.getElementById("hbLaparoscopicPopupTitleEn");
+    const titleMl = document.getElementById("hbLaparoscopicPopupTitleMl");
+
+    let currentLang = "ml";
+
+    const openHash = "#lapsterilization";
+
+    function setLang(lang) {
+      currentLang = lang;
+      const isEn = lang === "en";
+      contentEn.hidden = !isEn;
+      contentMl.hidden = isEn;
+      btnEn.setAttribute("aria-pressed", isEn ? "true" : "false");
+      btnMl.setAttribute("aria-pressed", !isEn ? "true" : "false");
+
+      if (titleEn && titleMl) {
+        titleEn.hidden = !isEn;
+        titleMl.hidden = isEn;
+      }
+    }
+
+    function openPopup() {
+      backdrop.hidden = false;
+      document.body.classList.add("hb-popup-open");
+      setLang(currentLang);
+      // Focus close button for accessibility
+      closeBtn.focus();
+    }
+
+    function closePopup() {
+      backdrop.hidden = true;
+      document.body.classList.remove("hb-popup-open");
+      // Return focus to the trigger
+      trigger.focus();
+    }
+
+    trigger.addEventListener("click", openPopup);
+    closeBtn.addEventListener("click", closePopup);
+
+    // Optional UX: click outside the panel closes the popup
+    backdrop.addEventListener("click", function (e) {
+      if (e.target === backdrop) closePopup();
+    });
+
+    btnEn.addEventListener("click", function () {
+      setLang("en");
+    });
+    btnMl.addEventListener("click", function () {
+      setLang("ml");
+    });
+
+    // Deep link: load page with #lapsterilization to open popup immediately.
+    function maybeOpenFromHash() {
+      if (window.location.hash === openHash) openPopup();
+    }
+
+    maybeOpenFromHash();
+    window.addEventListener("hashchange", function () {
+      maybeOpenFromHash();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (backdrop.hidden) return;
+      if (e.key === "Escape") closePopup();
+    });
+  }
+
   // Run initializers
   $(function () {
     initThemeToggle();
@@ -219,6 +299,7 @@
     initTestimonials();
     initContactForm();
     initAOS();
+    initLaparoscopicInfoPopup();
   });
 })();
 
