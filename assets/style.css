@@ -38,18 +38,37 @@ html[data-theme="dark"] {
   box-sizing: border-box;
 }
 
+html {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 body {
   font-family: "Nunito", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Apple Color Emoji",
     "Segoe UI Emoji";
   background: var(--hb-bg);
   color: var(--hb-text);
   overflow-x: hidden;
+  max-width: 100%;
+  position: relative;
 }
 
 html,
 body {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+}
+
+main {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+img,
+picture,
+video {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -187,6 +206,7 @@ html[data-theme="dark"] .hb-logo {
 .hb-hero {
   position: relative;
   padding: 68px 0 26px;
+  overflow-x: hidden;
 }
 
 .hb-hero-bg {
@@ -402,6 +422,12 @@ html[data-theme="dark"] .hb-hero-card-footer {
   display: flex;
   gap: 14px;
   align-items: flex-start;
+  min-width: 0;
+}
+
+.hb-feature > div:last-child {
+  min-width: 0;
+  flex: 1;
 }
 .hb-feature-icon {
   width: 78px;
@@ -529,6 +555,7 @@ html[data-theme="dark"] .hb-hero-card-footer {
   height: 100%;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .hb-doctor-media {
@@ -591,6 +618,7 @@ html[data-theme="dark"] .hb-doctor-overlay {
   flex-direction: column;
   gap: 10px;
   flex: 1;
+  min-width: 0;
 }
 .hb-doctor-name {
   font-weight: 950;
@@ -607,6 +635,7 @@ html[data-theme="dark"] .hb-doctor-overlay {
   margin: 0;
   color: var(--hb-muted);
   line-height: 1.7;
+  overflow-wrap: anywhere;
 }
 .hb-doctor-actions {
   margin-top: auto;
@@ -782,6 +811,14 @@ html[data-theme="dark"] .hb-doctor-overlay {
   border-radius: 18px;
   border: 1px solid rgba(124, 58, 237, 0.18);
   background: rgba(255, 255, 255, 0.45);
+  min-width: 0;
+}
+
+.hb-contact-item > span:last-of-type {
+  min-width: 0;
+  flex: 1;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 html[data-theme="dark"] .hb-contact-item {
   background: rgba(16, 22, 38, 0.40);
@@ -933,17 +970,20 @@ html[data-theme="dark"] .hb-form .form-select {
 .hb-popup-backdrop {
   position: fixed;
   inset: 0;
+  width: 100%;
+  max-width: 100%;
   z-index: 200;
   display: grid;
   place-items: center;
-  padding: 4vh 4vw;
+  padding: 4vh 4%;
+  box-sizing: border-box;
   background: rgba(7, 10, 18, 0.45);
   backdrop-filter: blur(12px);
 }
 
 .hb-popup-panel {
-  width: 80vw;
-  height: 80vh;
+  width: min(80vw, calc(100% - 8%));
+  height: min(80vh, calc(100% - 8%));
   max-width: 980px;
   max-height: 900px;
   overflow: auto;
@@ -952,6 +992,7 @@ html[data-theme="dark"] .hb-form .form-select {
   background: var(--hb-surface-2);
   box-shadow: var(--hb-shadow);
   padding: 18px 18px 22px;
+  box-sizing: border-box;
 }
 
 html[data-theme="dark"] .hb-popup-panel {
@@ -1040,23 +1081,29 @@ body.hb-popup-open {
   .hb-popup-backdrop {
     display: block;
     padding: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   .hb-popup-panel {
     position: fixed;
-    top: 5vh;
-    left: 5vw;
-    right: 5vw;
-    bottom: 5vh;
+    top: 5%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
     width: auto;
     height: auto;
-    max-width: none;
+    max-width: calc(100% - 10%);
     max-height: none;
     padding: 12px 12px 16px;
     border-radius: 18px;
-    margin: 0;
+    margin: 0 auto;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    box-sizing: border-box;
   }
 
   .hb-popup-contentwrap {
