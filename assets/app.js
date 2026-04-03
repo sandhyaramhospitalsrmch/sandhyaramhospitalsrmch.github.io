@@ -183,9 +183,10 @@
 
     const success = document.getElementById("hbFormSuccess");
     const error = document.getElementById("hbFormError");
+    const endpoint = "https://formspree.io/f/mwvwrpqb";
 
     // Basic validation using HTML constraints; jQuery to show/hide messages.
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", async function (e) {
       e.preventDefault();
       success.hidden = true;
       error.hidden = true;
@@ -197,10 +198,26 @@
         return;
       }
 
-      // Demo behavior: show success (no server).
-      success.hidden = false;
-      form.reset();
-      form.classList.remove("was-validated");
+      try {
+        const formData = new FormData(form);
+        const response = await window.fetch(endpoint, {
+          method: "POST",
+          body: formData,
+          headers: {
+            Accept: "application/json"
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error("Formspree submission failed");
+        }
+
+        success.hidden = false;
+        form.reset();
+        form.classList.remove("was-validated");
+      } catch (submitError) {
+        error.hidden = false;
+      }
     });
   }
 
