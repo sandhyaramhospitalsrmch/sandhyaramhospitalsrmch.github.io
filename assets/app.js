@@ -2,7 +2,7 @@
 (function () {
   const $ = window.jQuery;
 
-  function animateNumber(el, target) {
+  function animateNumber(el, target, suffix) {
     const duration = 900;
     const start = 0;
     const startTime = performance.now();
@@ -11,7 +11,7 @@
       const t = Math.min(1, (now - startTime) / duration);
       const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
       const val = Math.round(start + (target - start) * eased);
-      el.textContent = String(val);
+      el.textContent = String(val) + (suffix || "");
       if (t < 1) requestAnimationFrame(tick);
     }
 
@@ -28,7 +28,8 @@
           const target = Number(el.getAttribute("data-hb-target") || 0);
           // Animate only once
           el.removeAttribute("data-hb-counter");
-          animateNumber(el, target);
+          const suffix = el.getAttribute("data-hb-suffix") || "";
+          animateNumber(el, target, suffix);
         });
       },
       { threshold: 0.35 }

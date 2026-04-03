@@ -79,32 +79,34 @@ html[data-theme="dark"] .hb-header {
 }
 
 .hb-logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 14px;
-  background: radial-gradient(circle at 25% 20%, rgba(236, 72, 153, 0.35), rgba(124, 58, 237, 0.15) 60%),
-    linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(16, 185, 129, 0.12));
-  border: 1px solid rgba(124, 58, 237, 0.15);
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(124, 58, 237, 0.14);
   display: grid;
   place-items: center;
   box-shadow: var(--hb-shadow-2);
   position: relative;
+  overflow: hidden;
 }
 
-.hb-logo-heart {
-  width: 18px;
-  height: 18px;
-  transform: rotate(-12deg);
-  background: linear-gradient(135deg, var(--hb-primary) 0%, var(--hb-primary-2) 100%);
-  clip-path: path("M9 16s-7-4.6-7-10A4 4 0 0 1 6 2c1.2 0 2.3.5 3 1.3C9.7 2.5 10.8 2 12 2a4 4 0 0 1 4 4c0 5.4-7 10-7 10z");
-  border-radius: 4px;
+.hb-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.06);
 }
 
-/* Small screens: clip-path path doesn't work in some browsers; keep a fallback */
-@supports not (clip-path: path("M9 16s-7-4.6-7-10A4 4 0 0 1 6 2c1.2 0 2.3.5 3 1.3C9.7 2.5 10.8 2 12 2a4 4 0 0 1 4 4c0 5.4-7 10-7 10z")) {
-  .hb-logo-heart {
-    clip-path: none;
-    border-radius: 50%;
+html[data-theme="dark"] .hb-logo {
+  background: rgba(16, 22, 38, 0.75);
+}
+
+@media (max-width: 575px) {
+  .hb-logo {
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -396,14 +398,18 @@ html[data-theme="dark"] .hb-hero-card-footer {
   align-items: flex-start;
 }
 .hb-feature-icon {
-  width: 42px;
-  height: 42px;
-  border-radius: 16px;
+  width: 78px;
+  min-width: 78px;
+  height: 40px;
+  border-radius: 999px;
   background: rgba(124, 58, 237, 0.10);
   border: 1px solid rgba(124, 58, 237, 0.18);
   display: grid;
   place-items: center;
-  font-size: 18px;
+  font-size: 17px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
 }
 .hb-feature-title {
   font-weight: 900;
