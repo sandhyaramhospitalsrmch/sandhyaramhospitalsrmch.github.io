@@ -658,6 +658,32 @@ html[data-theme="dark"] .hb-doctor-overlay {
   font-size: 13.5px;
 }
 
+/* Compact doctor cards (used for the 3 main doctors) */
+.hb-doctor--compact .hb-doctor-media {
+  height: 124px;
+}
+
+.hb-doctor--compact .hb-doctor-body {
+  padding: 12px;
+  gap: 7px;
+}
+
+.hb-doctor--compact .hb-doctor-overlay {
+  width: 118px;
+  height: 40px;
+}
+
+.hb-doctor--compact .hb-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 24px;
+}
+
+.hb-doctor--compact .hb-doctor-tags .hb-tag {
+  padding: 6px 10px;
+  font-size: 11.5px;
+}
+
 /* Stories / Swiper */
 .hb-quote {
   padding: 28px 22px;
