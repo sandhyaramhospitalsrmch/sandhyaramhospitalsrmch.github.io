@@ -669,6 +669,122 @@ html[data-theme="dark"] .hb-doctor-overlay {
   height: 150px;
 }
 
+/* Lead doctor: photo left-aligned; right edge blends into standard media gradient */
+.hb-doctor--small .hb-doctor-media.hb-doctor-media--lead {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  padding: 0;
+  overflow: hidden;
+  background: transparent;
+}
+
+html[data-theme="dark"] .hb-doctor--small .hb-doctor-media.hb-doctor-media--lead {
+  background: transparent;
+}
+
+.hb-doctor-lead-rest {
+  flex: 1;
+  min-width: 0;
+  background: radial-gradient(circle at 20% 15%, rgba(124, 58, 237, 0.22), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.19), transparent 60%),
+    linear-gradient(135deg, rgba(247, 240, 245, 1), rgba(232, 247, 243, 1));
+}
+
+html[data-theme="dark"] .hb-doctor-lead-rest {
+  background: radial-gradient(circle at 20% 15%, rgba(124, 58, 237, 0.22), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.19), transparent 60%),
+    linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(16, 185, 129, 0.09));
+}
+
+.hb-doctor-lead-photo {
+  position: relative;
+  flex: 0 0 48%;
+  max-width: 56%;
+  height: 100%;
+  min-width: 0;
+  overflow: hidden;
+  /* Same backdrop as .hb-doctor-media / .hb-doctor-lead-rest so transparent PNGs match */
+  background: radial-gradient(circle at 20% 15%, rgba(124, 58, 237, 0.22), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.19), transparent 60%),
+    linear-gradient(135deg, rgba(247, 240, 245, 1), rgba(232, 247, 243, 1));
+}
+
+html[data-theme="dark"] .hb-doctor-lead-photo {
+  background: radial-gradient(circle at 20% 15%, rgba(124, 58, 237, 0.22), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.19), transparent 60%),
+    linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(16, 185, 129, 0.09));
+}
+
+.hb-doctor-lead-img {
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Bias toward top of source so crown of head stays inside frame */
+  object-position: left 22%;
+  display: block;
+}
+
+/* Centered subject in source file (e.g. square headshot); same lead layout as .hb-doctor-lead-img */
+.hb-doctor-lead-img--center {
+  object-position: center 18%;
+}
+
+/* Fade uses the same stack as .hb-doctor-lead-rest; mask reveals it toward the right only */
+.hb-doctor-lead-photo::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: min(72%, 148px);
+  pointer-events: none;
+  background: radial-gradient(circle at 20% 15%, rgba(124, 58, 237, 0.22), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.19), transparent 60%),
+    linear-gradient(135deg, rgba(247, 240, 245, 1), rgba(232, 247, 243, 1));
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgb(0 0 0 / 0) 0%,
+    rgb(0 0 0 / 0) 52%,
+    rgb(0 0 0 / 0.35) 72%,
+    rgb(0 0 0 / 0.85) 88%,
+    rgb(0 0 0 / 1) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgb(0 0 0 / 0) 0%,
+    rgb(0 0 0 / 0) 52%,
+    rgb(0 0 0 / 0.35) 72%,
+    rgb(0 0 0 / 0.85) 88%,
+    rgb(0 0 0 / 1) 100%
+  );
+}
+
+html[data-theme="dark"] .hb-doctor-lead-photo::after {
+  background: radial-gradient(circle at 20% 15%, rgba(124, 58, 237, 0.22), transparent 60%),
+    radial-gradient(circle at 80% 20%, rgba(236, 72, 153, 0.19), transparent 60%),
+    linear-gradient(135deg, rgba(124, 58, 237, 0.12), rgba(16, 185, 129, 0.09));
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgb(0 0 0 / 0) 0%,
+    rgb(0 0 0 / 0) 52%,
+    rgb(0 0 0 / 0.4) 74%,
+    rgb(0 0 0 / 0.9) 90%,
+    rgb(0 0 0 / 1) 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    rgb(0 0 0 / 0) 0%,
+    rgb(0 0 0 / 0) 52%,
+    rgb(0 0 0 / 0.4) 74%,
+    rgb(0 0 0 / 0.9) 90%,
+    rgb(0 0 0 / 1) 100%
+  );
+}
+
 .hb-doctor--small .hb-avatar {
   top: 18px;
   left: 14px;
