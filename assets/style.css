@@ -775,13 +775,20 @@ html[data-theme="dark"] .hb-contact-item {
   background: rgba(16, 22, 38, 0.40);
 }
 .hb-contact-icon {
-  width: 34px;
+  width: 86px;
+  min-width: 86px;
   height: 34px;
-  border-radius: 14px;
+  border-radius: 999px;
   background: rgba(124, 58, 237, 0.10);
   border: 1px solid rgba(124, 58, 237, 0.18);
   display: grid;
   place-items: center;
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+  text-align: center;
+  color: var(--hb-text);
+  flex-shrink: 0;
 }
 .hb-contact-note {
   margin-top: 14px;
