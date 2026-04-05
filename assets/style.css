@@ -150,7 +150,8 @@ html[data-theme="dark"] .hb-logo {
   letter-spacing: -0.02em;
 }
 .hb-brand-tag {
-  font-size: 12px;
+  font-size: 14px;
+  letter-spacing: 0.01em;
   color: var(--hb-muted);
 }
 
@@ -265,26 +266,42 @@ html[data-theme="dark"] .hb-brand-name {
   z-index: 1;
 }
 
-/* Scroll the full pill on narrow widths so the capsule wraps the entire line */
+/* Mobile: wrap + center; md+: one line, scroll outer if needed so capsule fits full text */
 .hb-pill-outer {
   max-width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
+  text-align: center;
 }
 
 .hb-pill {
   display: inline-block;
-  width: max-content;
-  max-width: none;
+  max-width: 100%;
   padding: 10px 16px;
-  white-space: nowrap;
+  white-space: normal;
+  text-align: center;
+  line-height: 1.45;
   background: rgba(255, 255, 255, 0.75);
   border: 1px solid var(--hb-border);
   border-radius: 999px;
   color: var(--hb-muted);
   font-weight: 700;
   backdrop-filter: blur(12px);
+}
+
+@media (min-width: 768px) {
+  .hb-pill-outer {
+    text-align: start;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+  }
+
+  .hb-pill {
+    width: max-content;
+    max-width: none;
+    white-space: nowrap;
+    text-align: left;
+    line-height: 1.1;
+  }
 }
 
 html[data-theme="dark"] .hb-pill {
@@ -657,6 +674,14 @@ html[data-theme="dark"] .hb-doctor-overlay {
 /* Doctors */
 .hb-dept-block {
   margin-top: 34px;
+}
+
+.hb-dept-row-triple {
+  margin-top: 34px;
+}
+
+.hb-dept-row-triple .hb-dept-block {
+  margin-top: 0;
 }
 
 .hb-dept-title {

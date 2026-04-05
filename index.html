@@ -431,105 +431,111 @@
             </div>
           </div>
 
-          <!-- Department doctors (small size cards) -->
-          <div class="hb-dept-block" data-aos="fade-up">
-            <h3 class="hb-dept-title">Surgery Department</h3>
-            <div class="row g-4 hb-doctors hb-doctors-small">
-              <div class="col-md-6 col-lg-4">
-                <article class="hb-doctor hb-doctor--small">
-                  <div class="hb-doctor-media">
-                    <div class="hb-avatar" aria-hidden="true">
-                      <span class="hb-avatar-initials">JV</span>
-                    </div>
-                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+          <!-- Department doctors (small size cards) — Surgery, Radiology, Orthopaedics in one row on large screens -->
+          <div class="row g-4 hb-dept-row-triple">
+            <div class="col-12 col-lg-4" data-aos="fade-up">
+              <div class="hb-dept-block">
+                <h3 class="hb-dept-title">Surgery Department</h3>
+                <div class="row g-4 hb-doctors hb-doctors-small">
+                  <div class="col-12">
+                    <article class="hb-doctor hb-doctor--small">
+                      <div class="hb-doctor-media">
+                        <div class="hb-avatar" aria-hidden="true">
+                          <span class="hb-avatar-initials">JV</span>
+                        </div>
+                        <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                      </div>
+                      <div class="hb-doctor-body">
+                        <h3 class="hb-doctor-name">Dr. Jayaprasad .V</h3>
+                        <p class="hb-doctor-role">General and Laparoscopic Surgeon</p>
+                        <p class="hb-doctor-focus">MBBS, MS (General Surgery)</p>
+                        <div class="hb-doctor-tags">
+                          <span class="hb-tag">Every Thursday</span>
+                        </div>
+                        <div class="hb-doctor-actions">
+                          <button
+                            class="btn hb-btn-soft hb-btn-sm"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#hbDoctorModal"
+                            data-doctor='{"name":"Dr. Jayaprasad .V","role":"General and Laparoscopic Surgeon","focus":"Every Thursday","highlights":["MBBS, MS (General Surgery)"]}'
+                          >
+                            View Profile
+                          </button>
+                        </div>
+                      </div>
+                    </article>
                   </div>
-                  <div class="hb-doctor-body">
-                    <h3 class="hb-doctor-name">Dr. Jayaprasad .V</h3>
-                    <p class="hb-doctor-role">General and Laparoscopic Surgeon</p>
-                    <p class="hb-doctor-focus">MBBS, MS (General Surgery)</p>
-                    <div class="hb-doctor-tags">
-                      <span class="hb-tag">Every Thursday</span>
-                    </div>
-                    <div class="hb-doctor-actions">
-                      <button
-                        class="btn hb-btn-soft hb-btn-sm"
-                        type="button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#hbDoctorModal"
-                        data-doctor='{"name":"Dr. Jayaprasad .V","role":"General and Laparoscopic Surgeon","focus":"Every Thursday","highlights":["MBBS, MS (General Surgery)"]}'
-                      >
-                        View Profile
-                      </button>
-                    </div>
-                  </div>
-                </article>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="hb-dept-block" data-aos="fade-up" data-aos-delay="80">
-            <h3 class="hb-dept-title">Radiology Department</h3>
-            <div class="row g-4 hb-doctors hb-doctors-small">
-              <div class="col-md-6 col-lg-4">
-                <article class="hb-doctor hb-doctor--small">
-                  <div class="hb-doctor-media">
-                    <div class="hb-avatar" aria-hidden="true">
-                      <span class="hb-avatar-initials">AA</span>
-                    </div>
-                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+            <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-delay="80">
+              <div class="hb-dept-block">
+                <h3 class="hb-dept-title">Radiology Department</h3>
+                <div class="row g-4 hb-doctors hb-doctors-small">
+                  <div class="col-12">
+                    <article class="hb-doctor hb-doctor--small">
+                      <div class="hb-doctor-media">
+                        <div class="hb-avatar" aria-hidden="true">
+                          <span class="hb-avatar-initials">AA</span>
+                        </div>
+                        <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                      </div>
+                      <div class="hb-doctor-body">
+                        <h3 class="hb-doctor-name">Dr. Arun Anand NP</h3>
+                        <p class="hb-doctor-role">Radiology Specialist</p>
+                        <p class="hb-doctor-focus">Available: Every Tuesday Evening 4.00PM to 5.00PM</p>
+                        <div class="hb-doctor-actions">
+                          <button
+                            class="btn hb-btn-soft hb-btn-sm"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#hbDoctorModal"
+                            data-doctor='{"name":"Dr. Arun Anand NP","role":"Radiology Specialist","focus":"Every Tuesday Evening 4.00PM to 5.00PM","highlights":[]}'
+                          >
+                            View Profile
+                          </button>
+                        </div>
+                      </div>
+                    </article>
                   </div>
-                  <div class="hb-doctor-body">
-                    <h3 class="hb-doctor-name">Dr. Arun Anand NP</h3>
-                    <p class="hb-doctor-role">Radiology Specialist</p>
-                    <p class="hb-doctor-focus">Available: Every Tuesday Evening 4.00PM to 5.00PM</p>
-                    <div class="hb-doctor-actions">
-                      <button
-                        class="btn hb-btn-soft hb-btn-sm"
-                        type="button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#hbDoctorModal"
-                        data-doctor='{"name":"Dr. Arun Anand NP","role":"Radiology Specialist","focus":"Every Tuesday Evening 4.00PM to 5.00PM","highlights":[]}'
-                      >
-                        View Profile
-                      </button>
-                    </div>
-                  </div>
-                </article>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div class="hb-dept-block" data-aos="fade-up" data-aos-delay="160">
-            <h3 class="hb-dept-title">Orthopaedics Department</h3>
-            <div class="row g-4 hb-doctors hb-doctors-small">
-              <div class="col-md-6 col-lg-4">
-                <article class="hb-doctor hb-doctor--small">
-                  <div class="hb-doctor-media">
-                    <div class="hb-avatar" aria-hidden="true">
-                      <span class="hb-avatar-initials">AK</span>
-                    </div>
-                    <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+            <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-delay="160">
+              <div class="hb-dept-block">
+                <h3 class="hb-dept-title">Orthopaedics Department</h3>
+                <div class="row g-4 hb-doctors hb-doctors-small">
+                  <div class="col-12">
+                    <article class="hb-doctor hb-doctor--small">
+                      <div class="hb-doctor-media">
+                        <div class="hb-avatar" aria-hidden="true">
+                          <span class="hb-avatar-initials">AK</span>
+                        </div>
+                        <div class="hb-doctor-overlay" aria-hidden="true">Photo placeholder</div>
+                      </div>
+                      <div class="hb-doctor-body">
+                        <h3 class="hb-doctor-name">Dr Adithya Krishnachandran</h3>
+                        <p class="hb-doctor-role">Consultant Orthopaedic Surgeon</p>
+                        <p class="hb-doctor-focus">MS Orthopaedic</p>
+                        <div class="hb-doctor-tags">
+                          <span class="hb-tag">Tuesday, Thursday and Saturday - 3.00PM to 5.00PM</span>
+                        </div>
+                        <div class="hb-doctor-actions">
+                          <button
+                            class="btn hb-btn-soft hb-btn-sm"
+                            type="button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#hbDoctorModal"
+                            data-doctor='{"name":"Dr Adithya Krishnachandran","role":"Consultant Orthopaedic Surgeon","focus":"Tuesday, Thursday and Saturday - 3.00PM to 5.00PM","highlights":["MS Orthopaedic"]}'
+                          >
+                            View Profile
+                          </button>
+                        </div>
+                      </div>
+                    </article>
                   </div>
-                  <div class="hb-doctor-body">
-                    <h3 class="hb-doctor-name">Dr Adithya Krishnachandran</h3>
-                    <p class="hb-doctor-role">Consultant Orthopaedic Surgeon</p>
-                    <p class="hb-doctor-focus">MS Orthopaedic</p>
-                    <div class="hb-doctor-tags">
-                      <span class="hb-tag">Tuesday, Thursday and Saturday - 3.00PM to 5.00PM</span>
-                    </div>
-                    <div class="hb-doctor-actions">
-                      <button
-                        class="btn hb-btn-soft hb-btn-sm"
-                        type="button"
-                        data-bs-toggle="modal"
-                        data-bs-target="#hbDoctorModal"
-                        data-doctor='{"name":"Dr Adithya Krishnachandran","role":"Consultant Orthopaedic Surgeon","focus":"Tuesday, Thursday and Saturday - 3.00PM to 5.00PM","highlights":["MS Orthopaedic"]}'
-                      >
-                        View Profile
-                      </button>
-                    </div>
-                  </div>
-                </article>
+                </div>
               </div>
             </div>
           </div>
@@ -807,7 +813,7 @@
                   </div>
                   <div class="col-md-6">
                     <label class="form-label" for="hbPhone">Phone</label>
-                    <input class="form-control" id="hbPhone" name="phone" placeholder="e.g., +1 555 123 4567" required />
+                    <input class="form-control" id="hbPhone" name="phone" placeholder="e.g., +91 9988123456" required />
                     <div class="invalid-feedback">Please enter a valid phone number.</div>
                   </div>
                   <div class="col-md-6">
